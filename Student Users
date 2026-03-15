@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+    int total,staff,nonteach,students;
+
+    printf("Enter total users: ");
+    scanf("%d",&total);
+
+    printf("Enter staff users: ");
+    scanf("%d",&staff);
+
+    nonteach = staff/3;
+
+    students = total - (staff + nonteach);
+
+    printf("Student Users = %d",students);
+
+    return 0;
+}
