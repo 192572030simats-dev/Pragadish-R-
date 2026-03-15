@@ -1,0 +1,24 @@
+Remove Duplicates from Array
+
+#include <stdio.h>
+
+int main(){
+    int a[]={15,14,25,14,32,14,31};
+    int i,j,k,n=7;
+
+    for(i=0;i<n;i++){
+        for(j=i+1;j<n;j++){
+            if(a[i]==a[j]){
+                for(k=j;k<n;k++)
+                    a[k]=a[k+1];
+                n--;
+                j--;
+            }
+        }
+    }
+
+    for(i=0;i<n;i++)
+        printf("%d ",a[i]);
+
+    return 0;
+}
