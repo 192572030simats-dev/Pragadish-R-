@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+void permute(char *a, int l, int r)
+{
+    int i;
+    char temp;
+
+    if(l==r)
+        printf("%s\n",a);
+    else
+    {
+        for(i=l;i<=r;i++)
+        {
+            temp=a[l]; a[l]=a[i]; a[i]=temp;
+
+            permute(a,l+1,r);
+
+            temp=a[l]; a[l]=a[i]; a[i]=temp;
+        }
+    }
+}
+
+int main()
+{
+    char str[20];
+
+    printf("Enter number: ");
+    scanf("%s",str);
+
+    permute(str,0,strlen(str)-1);
+
+    return 0;
+}
