@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    float p,years,rate,interest;
+    char senior;
+
+    printf("Enter principal amount: ");
+    scanf("%f",&p);
+
+    printf("Enter years: ");
+    scanf("%f",&years);
+
+    printf("Is senior citizen (y/n): ");
+    scanf(" %c",&senior);
+
+    if(senior=='y' || senior=='Y')
+        rate=12;
+    else
+        rate=10;
+
+    interest=(p*rate*years)/100;
+
+    printf("Interest = %.2f",interest);
+
+    return 0;
+}
